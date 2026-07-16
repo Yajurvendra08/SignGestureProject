@@ -8,7 +8,7 @@ There are three ways to run this project:
 
 | | **Pretrained (zero training)** | **Landmark pipeline** | **Pixel pipeline (legacy)** |
 |---|---|---|---|
-| Setup needed | None — just run it | Capture ~50-80 samples per gesture | Capture ~150+ images per gesture |
+| Setup needed | None just run it | Capture ~50-80 samples per gesture | Capture ~150+ images per gesture |
 | What it recognizes | 7 fixed common gestures (see below) | Any custom gesture you teach it | Any custom gesture you teach it |
 | How it "sees" your hand | Google's pretrained gesture model | Google's pretrained hand key points + your classifier | Raw image pixels, cropped to a box |
 | Robust to lighting/background/skin tone | Yes | Yes, largely | Sensitive |
@@ -24,7 +24,7 @@ custom model for anything it doesn't recognize.
 
 Important honesty note: this is *not* full sign-language recognition. Real
 ASL/BSL/etc. have thousands of signs, many involving motion over time and
-facial grammar — recognizing all of that reliably needs a large labeled
+facial grammar recognizing all of that reliably needs a large labeled
 video dataset and a much bigger project. What's here is a genuinely useful,
 zero-setup base for common gestures, extendable with your own signs.
 
@@ -73,7 +73,7 @@ pip install -r requirements.txt
 ```
 
 If `mediapipe` fails to install (e.g. your Python version isn't supported
-yet), you can still use the pixel pipeline — just skip that one line, or
+yet), you can still use the pixel pipeline, just skip that one line, or
 remove `mediapipe` from `requirements.txt` before installing.
 
 ---
@@ -84,7 +84,7 @@ remove `mediapipe` from `requirements.txt` before installing.
 python src/recognize_pretrained.py
 ```
 That's it. A window opens with a skeleton overlay on your hand and the
-recognized gesture on screen — no capture step, no training step. The
+recognized gesture on screen, no capture step, no training step. The
 first run downloads a small (~8 MB) pretrained model automatically. Press
 **q** to quit.
 
@@ -101,7 +101,7 @@ outside the built-in 7.
 python src/capture_landmarks.py --label hello
 ```
 A window opens with a skeleton overlay on your hand. It auto-captures a
-sample every 0.1s by default — just show your hand and move it slightly
+sample every 0.1s by default,just show your hand and move it slightly
 (rotate, tilt, move closer/further) for about 10 seconds. Press **ESC** to
 stop early. The first run downloads a small (~8 MB) pretrained hand model
 automatically.
@@ -158,7 +158,7 @@ python src/recognize.py
 `models/gesture_model.pkl` (pixel pipeline) is a small demo model
 recognizing four gestures: `hello`, `no`, `thanks`, `yes`. It's included so
 you can try `recognize.py` immediately after installing, but for good
-accuracy you should capture your own data and retrain — lighting,
+accuracy you should capture your own data and retrain ,lighting,
 background, and hand shape vary a lot between people and rooms. The
 landmark pipeline has no bundled model since it needs so little data that
 training your own only takes a couple of minutes.
@@ -167,7 +167,7 @@ training your own only takes a couple of minutes.
 - Use good, even lighting on your hand
 - Capture samples/images from slightly different angles and distances
 - Capture a similar number of samples for each gesture
-- Re-run the capture script any time to add more samples — it won't overwrite existing ones
+- Re-run the capture script any time to add more samples, it won't overwrite existing ones
 
 ## Troubleshooting
 | Problem | Fix |
@@ -201,4 +201,4 @@ frames based on raw pixel values.
 Issues and pull requests are welcome.
 
 ## License
-Released under the MIT License — see [LICENSE](LICENSE) for details.
+Released under the MIT License ,see [LICENSE](LICENSE) for details.

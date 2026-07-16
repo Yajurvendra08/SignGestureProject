@@ -1,5 +1,5 @@
 opencv-python
 numpy
 scikit-learn
-tensorflow
-matplotlib
+joblib
+mediapipe

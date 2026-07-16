@@ -14,7 +14,7 @@ There are three ways to run this project:
 | Robust to lighting/background/skin tone | Yes | Yes, largely | Sensitive |
 | Extra dependency | `mediapipe` | `mediapipe` | none |
 
-**Start with the pretrained option** : it works the instant you install
+**Start with the pretrained option** :-  it works the instant you install
 dependencies, no data collection required. It recognizes 7 gestures people
 actually use day to day: Open Palm (Hello), Closed Fist, Thumbs Up (Yes),
 Thumbs Down (No), Victory/Peace, Pointing Up, and I Love You (an actual ASL
